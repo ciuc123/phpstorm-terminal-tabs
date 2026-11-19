@@ -19,6 +19,10 @@ actions, not specific shortcuts.
 
 **Remove it:** Settings → Plugins → Installed → Terminal Tab Switch Shortcuts → Uninstall.
 
+**Upgrading from 1.0.0:** 1.0.0 used the plugin id `local.terminal-tab-switch`, and 1.1.0+ uses
+`com.ciuculescu.terminal-tab-switch`. The IDE treats them as two different plugins, so uninstall
+the old one first. Leaving both installed does no harm, it's just clutter.
+
 ## Compatibility
 
 - Tested: PhpStorm 2026.3 (build 263) on Windows.
@@ -68,6 +72,10 @@ runtime.
 
 This pushes the tag `v1.0.1`. GitHub Actions builds the zip and attaches it to a GitHub release,
 and the download link above always points to the latest release.
+
+Once the repo secret `JETBRAINS_MARKETPLACE_TOKEN` is set (a permanent token from
+plugins.jetbrains.com → profile → My Tokens), the same run also uploads the zip to the JetBrains
+Marketplace. The version in the tag must be new on the Marketplace.
 
 ## License
 

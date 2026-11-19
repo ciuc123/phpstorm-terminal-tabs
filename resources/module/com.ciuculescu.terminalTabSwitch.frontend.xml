@@ -3,6 +3,6 @@
     <module name="intellij.terminal.frontend"/>
   </dependencies>
   <extensions defaultExtensionNs="org.jetbrains.plugins.terminal">
-    <allowedActionsProvider implementation="local.terminaltabs.TabActionsProvider"/>
+    <allowedActionsProvider implementation="com.ciuculescu.terminaltabs.TabActionsProvider"/>
   </extensions>
 </idea-plugin>

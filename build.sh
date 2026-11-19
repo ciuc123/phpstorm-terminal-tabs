@@ -7,7 +7,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 VERSION="${VERSION:-dev}"
 NAME=terminal-tab-switch
-MODULE=local.terminalTabSwitch.frontend
+MODULE=com.ciuculescu.terminalTabSwitch.frontend
 PKG="build/pkg/$NAME"
 
 rm -rf build dist
@@ -16,7 +16,8 @@ mkdir -p build/stubs build/classes build/main/META-INF "$PKG/lib/modules" dist
 javac --release 21 -nowarn -d build/stubs $(find stubs -name '*.java')
 javac --release 21 -nowarn -cp build/stubs -d build/classes $(find src -name '*.java')
 
-# Main jar: plugin.xml with the version filled in.
+# Main jar: META-INF (plugin.xml with the version filled in, plugin icon).
+cp -r resources/main/META-INF/. build/main/META-INF/
 sed "s/@VERSION@/$VERSION/" resources/main/META-INF/plugin.xml > build/main/META-INF/plugin.xml
 jar --create --no-manifest --file "$PKG/lib/$NAME.jar" -C build/main .
 

@@ -1,13 +1,24 @@
 <idea-plugin>
-  <id>local.terminal-tab-switch</id>
+  <id>com.ciuculescu.terminal-tab-switch</id>
   <name>Terminal Tab Switch Shortcuts</name>
   <version>@VERSION@</version>
-  <vendor>local</vendor>
-  <description>Lets Select Next/Previous Tab (Alt+Right/Left) work inside the reworked terminal on Windows and Linux.</description>
+  <vendor url="https://ciuculescu.com">Andrei Ciuculescu</vendor>
+  <description><![CDATA[
+    <p>Brings back <b>Select Next / Previous Tab</b> (<kbd>Alt+Right</kbd> / <kbd>Alt+Left</kbd> by default)
+    inside the reworked terminal on Windows and Linux.</p>
+    <p>Since 2026.3 the new terminal sends those keys to the shell, so you can no longer switch
+    terminal tabs from the keyboard. This plugin lets just those two IDE actions through. Every
+    other key still goes to the shell. Custom shortcuts for the same actions work too.</p>
+    <p><a href="https://github.com/ciuc123/phpstorm-terminal-tabs">Source on GitHub</a> ·
+    <a href="https://ciuculescu.com/posts/2026-11-19-phpstorm-terminal-alt-left-right-plugin/">How it works</a></p>
+  ]]></description>
+  <change-notes><![CDATA[
+    <p>First Marketplace release: lets NextTab / PreviousTab through the reworked terminal (2026.3+).</p>
+  ]]></change-notes>
   <idea-version since-build="263"/>
   <depends>com.intellij.modules.platform</depends>
   <depends>org.jetbrains.plugins.terminal</depends>
   <content>
-    <module name="local.terminalTabSwitch.frontend"/>
+    <module name="com.ciuculescu.terminalTabSwitch.frontend"/>
   </content>
 </idea-plugin>

@@ -1,4 +1,4 @@
-package local.terminaltabs;
+package com.ciuculescu.terminaltabs;
 
 import com.intellij.terminal.frontend.view.TerminalAllowedActionsProvider;
 import java.util.List;
