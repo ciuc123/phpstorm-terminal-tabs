@@ -1,0 +1,13 @@
+<idea-plugin>
+  <id>local.terminal-tab-switch</id>
+  <name>Terminal Tab Switch Shortcuts</name>
+  <version>@VERSION@</version>
+  <vendor>local</vendor>
+  <description>Lets Select Next/Previous Tab (Alt+Right/Left) work inside the reworked terminal on Windows and Linux.</description>
+  <idea-version since-build="263"/>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>org.jetbrains.plugins.terminal</depends>
+  <content>
+    <module name="local.terminalTabSwitch.frontend"/>
+  </content>
+</idea-plugin>
